@@ -1,0 +1,34 @@
+<fieldset class="usuario-body">
+    <legend> Cadastro de Usuário </legend>
+    <mat-card class="home mat-elevation-z4">
+        <mat-card-title> Dados Pessoais </mat-card-title>
+        <form class="row">
+            <mat-form-field>
+                <input matInput required placeholder="Nome" [(ngModel)]="user.nome" name="nome" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput required placeholder="Sobrenome" [(ngModel)]="user.sobrenome" name="sobrenome"
+                    type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Telefone" [(ngModel)]="user.telefone" name="telefone" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput required placeholder="Email" [(ngModel)]="user.email" name="email" type="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput required placeholder="Password" [(ngModel)]="user.password" name="password"
+                    type="password">
+            </mat-form-field>
+        </form>
+
+
+        <button class="btnSalvar" mat-raised-button (click)="createUser()" color="primary">
+            Salvar
+        </button>
+
+        <button class="btnCancelar" mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </mat-card>
+</fieldset>

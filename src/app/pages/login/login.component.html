@@ -1,0 +1,18 @@
+<mat-card class="home mat-elevation-z4" >
+    <form class="login">
+        <mat-card-title class="title"> Login </mat-card-title>
+        <mat-form-field class="formLogin">
+            <input class="input" matInput name="email" type="email" required>
+            <mat-placeholder class="placeholder">Digite seu email</mat-placeholder> 
+        </mat-form-field>
+        <mat-form-field class="formLogin">
+            <input class="input" matInput name="password" type="password" required>
+            <mat-placeholder class="placeholder">Digite sua senha</mat-placeholder> 
+        </mat-form-field>
+        <br>
+        <button class="btnLogin" mat-raised-button> Login </button>
+    </form>
+    <br>
+    <a routerLink='/user-create'>Ainda não tem login ? </a><br>
+    <a routerLink='/'>Esqueceu sua senha ? </a>
+</mat-card>

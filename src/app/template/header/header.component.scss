@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    background-color: lightgray;
+}
+
+.header a {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.header .logo {
+    max-height: 32px;
+}
+
+.header .title-group {
+    padding-left: 25px;
+}
+
+.header .title-group i {
+    padding-right: 20px;
+}
+
+.sair {
+    margin-right: 10px;
+    margin-left: 980px;
+    color: green;
+}
+
+.homeIcon {
+    color: dimgray;
+}
+.logoutIcon {
+    margin-left: 10px;
+}
+
+i {
+    font-size: 36px;
+}

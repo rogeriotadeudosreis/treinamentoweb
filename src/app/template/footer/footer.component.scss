@@ -1,0 +1,34 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.footer span {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: dimgray;
+    font-weight: 500;
+}
+
+.footer .title-group i {
+    padding-right: 5px;
+}
+
+i {
+   font-size: 36px;
+}
+
+
+
+

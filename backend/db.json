@@ -1,0 +1,123 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "Rogerio",
+      "sobrenome": "Reis",
+      "telefone": "6298591-2233",
+      "email": "rogerio@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "nome": "Ivone",
+      "sobrenome": "Reis",
+      "telefone": "6298591-2244",
+      "email": "ivone@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "nome": "Ricardo",
+      "sobrenome": "Bento",
+      "telefone": "6298591-2255",
+      "email": "ricardo@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "nome": "Fabio",
+      "sobrenome": "Ferreira",
+      "telefone": "6298591-2266",
+      "email": "fabio@gmail.com",
+      "password": "123456"
+    },
+    {
+      "nome": "João Ricardo",
+      "sobrenome": "Carvalho",
+      "telefone": "62985915588",
+      "email": "joaoricardo@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "nome": "Lucia Paula",
+      "sobrenome": "Carvalho",
+      "telefone": "62985915599",
+      "email": "luciapaula@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "nome": "Aires",
+      "sobrenome": "Ribeiro",
+      "telefone": "62985915500",
+      "email": "aires@gmail.com",
+      "password": "******",
+      "id": 7
+    },
+    {
+      "nome": "Francisco",
+      "sobrenome": "Xico",
+      "telefone": "62985916542",
+      "email": "francisco@gmail.com",
+      "password": "******",
+      "id": 8
+    },
+    {
+      "nome": "Conceição Avelino dos Reis ",
+      "sobrenome": "Reis ",
+      "telefone": "1632025176",
+      "email": "conceicao@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "telefone": "",
+      "email": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "telefone": "",
+      "email": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "nome": "Marcio",
+      "sobrenome": "Carvalho",
+      "telefone": "11985916542",
+      "email": "marcio@gmail.com",
+      "password": "******",
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "nome\n": "Maria das Dores",
+      "sobrenome": "Oliveira",
+      "telefone": "1155554444",
+      "email": "maria@gmail.com",
+      "password": "123456",
+      "id": 18
+    }
+  ]
+}

@@ -20,8 +20,7 @@ export class UserService {
     this.snackbar.open(msg, '', {
       duration: 3000,
       horizontalPosition: 'right',
-      verticalPosition: 'top',
-      
+      verticalPosition: 'top',      
     })
   }
 

@@ -2,43 +2,50 @@
     <legend> Cadastro de Usuário </legend>
     <mat-card class="home mat-elevation-z4">
         <mat-card-title> Dados Pessoais </mat-card-title>
-        <form class="row" (ngSubmit)="createUser()" #loginForm="ngForm">
+        <form class="row" [formGroup]="userCreateForm" (Submit)="createUser()">
             <mat-form-field>
-                <input matInput required placeholder="Nome" [(ngModel)]="user.nome" name="nome" type="text"
-                    #campoNome="ngModel">
-                <app-mensagem *ngIf="campoNome.invalid && campoNome.touched" mensagem="Preenchimento do nome é obrigatório."></app-mensagem>
+                <input matInput placeholder="Nome" formControlName="nome" type="text">
+                <app-mensagem *ngIf="userCreateForm.get('nome')?.errors?.required && 
+                userCreateForm.get('nome')?.touched" mensagem="Preenchimento do nome é obrigatório.">
+                </app-mensagem>
+               
             </mat-form-field>
-           
+
             <mat-form-field>
-                <input matInput required placeholder="Sobrenome" [(ngModel)]="user.sobrenome" name="sobrenome"
-                    type="text" #campoSobrenome="ngModel">
-                <app-mensagem *ngIf="campoSobrenome.invalid && campoSobrenome.touched" mensagem="Preenchimento do sobrenome é obrigatório.">
+                <input matInput placeholder="sobrenome" formControlName="sobrenome" type="text">
+                <app-mensagem *ngIf="userCreateForm.get('sobrenome')?.errors?.required && 
+                userCreateForm.get('sobrenome')?.touched" mensagem="Preenchimento do sobrenome é obrigatório.">
+                </app-mensagem>
+                <app-mensagem *ngIf="userCreateForm.get('sobrenome')?.errors && 
+                userCreateForm.get('sobrenome')?.touched"
+                    mensagem="Sobrenome preenchido incorreto, verifique a sintaxe.">
                 </app-mensagem>
             </mat-form-field>
-           
+
             <mat-form-field>
-                <input matInput required placeholder="Telefone" [(ngModel)]="user.telefone" name="telefone"
-                    type="text" #campoTelefone="ngModel">
-                <app-mensagem *ngIf="campoTelefone.invalid && campoTelefone.touched" mensagem="Preenchimento do telefone é obrigatório.">
+                <input matInput required placeholder="Telefone" formControlName="telefone" type="number">
+                <app-mensagem *ngIf="userCreateForm.get('telefone')?.errors?.required && 
+                userCreateForm.get('telefone')?.touched" mensagem="Preenchimento do telefone é obrigatório.">
                 </app-mensagem>
             </mat-form-field>
-           
+
             <mat-form-field>
-                <input matInput required placeholder="Email" [(ngModel)]="user.email" name="email" type="email"
-                    #campoEmail="ngModel">
-                <app-mensagem *ngIf="campoEmail.invalid && campoEmail.touched" mensagem="Preenchimento do email é obrigatório.">
+                <input matInput required placeholder="Email" formControlName="email" type="email">
+                <app-mensagem *ngIf="userCreateForm.get('email')?.errors?.required &&
+                userCreateForm.get('email')?.touched " mensagem="Preenchimento do email é obrigatório.">
+                </app-mensagem>
+                <app-mensagem *ngIf="userCreateForm.get('email')?.errors?.email &&
+                userCreateForm.get('email')?.touched " mensagem="Email informado está incorreto, verifique.">
                 </app-mensagem>
             </mat-form-field>
             <mat-form-field>
-                <input matInput required placeholder="Password" [(ngModel)]="user.password" name="password"
-                    type="password" #campoPassword="ngModel">
-                <app-mensagem *ngIf="campoPassword.invalid && campoPassword.touched" mensagem="Preenchimento do password é obrigatório.">
+                <input matInput required placeholder="Password" formControlName="password" type="password">
+                <app-mensagem mensagem="Preenchimento do password é obrigatório.">
                 </app-mensagem>
             </mat-form-field>
         </form>
 
-        <button type="submit" class="btnSalvar" [disabled]="loginForm.invalid" mat-raised-button (click)="createUser()"
-            color="primary">
+        <button type="submit" class="btnSalvar" mat-raised-button (click)="createUser()" color="primary">
             Salvar
         </button>
 
@@ -46,4 +53,11 @@
             Cancelar
         </button>
     </mat-card>
+    <br>
+    <fieldset>
+        <legend>Endereço</legend>
+        <mat-card class="home mat-elevation-z4">
+            <mat-card-subtitle>Dados do Endereço</mat-card-subtitle>
+        </mat-card>
+    </fieldset>
 </fieldset>

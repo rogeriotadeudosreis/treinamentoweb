@@ -1,6 +1,8 @@
+import { registerLocaleData } from '@angular/common';
+import { User } from './../../models/user';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -10,25 +12,34 @@ import { UserService } from '../../services/user.service';
 })
 export class UserCreateComponent implements OnInit {
 
-  user: User = {
-    nome: '',
-    sobrenome: '',
-    telefone: '',
-    email: '',
-    password: ''
-  }
+  userCreateForm!: FormGroup;
 
   constructor(
+    private formBuilder: FormBuilder,
     private userService: UserService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.formulary();
+  }
 
+  formulary() {
+    this.userCreateForm = this.formBuilder.group({
+      nome: ['',[Validators.required, Validators.minLength(3)]],
+      sobrenome: ['', Validators.required, Validators.minLength(3)],
+      telefone: ['', Validators.required, Validators.min(9)],
+      email: ['', Validators.required, Validators.email],
+      password: ['', Validators.required, Validators.min(6)]
+    });
   }
 
   createUser(): void {
-    console.log('Enviando dados do novo usuário....', this.user)
-    this.userService.create(this.user).subscribe(() => {
+
+    const userNew = this.userCreateForm.getRawValue() as User
+
+    console.log('Enviando dados do novo usuário....', userNew)
+
+    this.userService.create(userNew).subscribe(() => {
       this.userService.showMessage('Cadastro de usuário realizado com sucesso')
       this.router.navigate(['/user-list'])
     }, err => {
@@ -37,7 +48,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/user-list'])    
+    this.router.navigate(['/'])
   }
 
 }

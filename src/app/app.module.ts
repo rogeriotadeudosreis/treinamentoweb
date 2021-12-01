@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { MensagemModule } from './componentes/mensagem/mensagem.module';
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -51,7 +52,8 @@ registerLocaleData(localePt);
     HttpClientModule,
     UserModule,
     HomeModule,
-    MensagemModule
+    MensagemModule,
+    FormsModule
   ],
   exports: [
     MatCardModule,

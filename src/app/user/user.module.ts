@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,7 +27,8 @@ import { UserRoutingModule } from './user-routing.module';
     FormsModule,
     MatFormFieldModule,
     MatButtonModule,
-    MensagemModule
+    MensagemModule,
+    ReactiveFormsModule
   ],
   exports: [
     UserDetailComponent,

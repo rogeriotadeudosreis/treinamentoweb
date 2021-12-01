@@ -1,40 +1,22 @@
-.login {
+.login-body {
+    flex-direction: column;
+    margin: 140px 0px 0px 400px;
+    width: 40%;
+}
+
+.mat-card-title {
+    text-align: center;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.title {
-    margin-top: 30px;
-    font-weight: bold;
-    color: #bbbbbb;
+.login {
+    margin: auto;
 }
 
-.mat-card {
-    background-color: hsl(22, 32%, 43%);
-    width: 30%;
-    margin: 10% auto;
-    border-radius: 8px;
-    text-align: end;
-}
-
-.btnLogin{
+.btnLogin {
     margin-right: 10px;
-    background-color: #3f51b5;
-    color: #FFF;
-    width: 100px;
-}
-
-.formLogin {
-    width: 300px;
-    color: #FFF;
-}
-
-a {
-    color: #bbbbbb;
-    font-size: 12px;
-}
-
-.placeholder {
-    color: #bbbbbb;
 }

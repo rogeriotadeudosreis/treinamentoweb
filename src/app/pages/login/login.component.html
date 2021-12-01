@@ -1,18 +1,30 @@
-<mat-card class="home mat-elevation-z4" >
-    <form class="login">
-        <mat-card-title class="title"> Login </mat-card-title>
-        <mat-form-field class="formLogin">
-            <input class="input" matInput name="email" type="email" required>
-            <mat-placeholder class="placeholder">Digite seu email</mat-placeholder> 
-        </mat-form-field>
-        <mat-form-field class="formLogin">
-            <input class="input" matInput name="password" type="password" required>
-            <mat-placeholder class="placeholder">Digite sua senha</mat-placeholder> 
-        </mat-form-field>
-        <br>
-        <button class="btnLogin" mat-raised-button> Login </button>
-    </form>
-    <br>
-    <a routerLink='/user-create'>Ainda não tem login ? </a><br>
-    <a routerLink='/'>Esqueceu sua senha ? </a>
-</mat-card>
+<fieldset class="login-body">
+    <legend> Autenticação do Usuário </legend>
+    <mat-card class="login mat-elevation-z4">
+        <mat-card-title> Login </mat-card-title>
+        <form class="row" (ngSubmit)="login()" #loginForm="ngForm">
+            <mat-form-field>
+                <input matInput required placeholder="Email" [(ngModel)]="user.email" name="email" type="email"
+                    #campoEmail="ngModel">
+                <app-mensagem *ngIf="campoEmail.invalid && campoEmail.touched"
+                    mensagem="Email é obrigatório."> 
+                </app-mensagem>
+            </mat-form-field>
+            <mat-form-field> 
+                <input matInput required placeholder="Password" [(ngModel)]="user.password" name="password"
+                    type="password" #campoPassword="ngModel">
+                <app-mensagem *ngIf="campoPassword.invalid && campoPassword.touched"
+                    mensagem="Password é obrigatório.">
+                </app-mensagem>
+            </mat-form-field>
+        </form>
+
+        <button type="submit" class="btnLogin" [disabled]="loginForm.invalid" mat-raised-button (click)="login()"
+            color="primary">
+            Login
+        </button>
+
+        <p>Ainda não tem cadastro ? <a routerLink="/user-create">Click aqui</a></p>
+
+    </mat-card>
+</fieldset>
